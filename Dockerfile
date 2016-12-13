@@ -5,4 +5,4 @@ MAINTAINER william0wang
 COPY client_linux_amd64 /bin/kcptun
 RUN chmod 755 /bin/kcptun
 
-CMD kcptun -l :${kcp_out_port} -r ${kcp_in_addr} $ --crypt ${kcp_crypt} --key ${kcp_key} --mode ${kcp_mode}
+CMD kcptun -l :${kcp_out_port} -r ${kcp_in_addr} --crypt ${kcp_crypt} --key ${kcp_key} --mode ${kcp_mode}
