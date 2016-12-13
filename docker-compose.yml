@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  kcptun_client:
+    restart: always
+    image: wan0eve/kcptun-client:latest
+    environment:
+      - kcp_out_port=8080
+      - kcp_in_addr=hostname:6381
+      - kcp_crypt=none
+      - kcp_mode=fast2
+    
+    ports:
+      - "6381:8080"
